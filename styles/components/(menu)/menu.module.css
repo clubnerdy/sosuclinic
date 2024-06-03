@@ -1,0 +1,137 @@
+.container {
+    padding: 36px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 105;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: min(26.37%, 164px) 72.03% 20px;
+    gap: 10px;
+    background: #FFFFFF;
+}
+
+.container.active {
+    display: grid;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+    overflow: hidden;
+}
+
+.cancel__btn {
+    cursor: pointer;
+}
+
+.contents {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    place-items: flex-start;
+    gap: 32px;
+    overflow: hidden;
+}
+
+.back {
+    width: max-content;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.back img {
+    width: 5px;
+}
+
+.back span {
+    font-family: var(--font-eb-garamond);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--font-black);
+}
+
+.list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    gap: 32px;
+    animation: fadeInLeft var(--theme-duration-1);
+}
+
+.line {
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    animation: fadeInLeft var(--theme-duration-1);
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 36px 56px 36px 36px;
+    }
+
+    .header {
+        flex-direction: row-reverse;
+    }
+
+    .contents {
+        grid-template-columns: 1fr;
+    }
+
+    .back {
+        display: flex;
+    }
+
+    .list {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--font-white);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

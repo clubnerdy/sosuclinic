@@ -1,0 +1,80 @@
+.frame {
+    position: relative;
+    width: 100%;
+    max-width: 178px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    text-align: center;
+    font-family: var(--font-eb-garamond);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--font-black);
+}
+
+.contents {
+    padding: 20px;
+    width: 156px;
+    height: 156px;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+}
+
+.contents img {
+    margin: 0 auto;
+    max-height: 104px;
+    height: 100%;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.info * {
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: var(--font-black);
+}
+
+@media screen and (max-width: 500px) {
+
+    .frame {
+        width: max-content;
+        max-width: unset;
+    }
+
+    .contents {
+        aspect-ratio: unset;
+        padding: 0 10px;
+        height: 100px;
+    }
+
+    .frame:nth-child(odd) {
+        justify-self: flex-end;
+    }
+
+    .frame:nth-child(even) {
+        justify-self: flex-start;
+    }
+
+}

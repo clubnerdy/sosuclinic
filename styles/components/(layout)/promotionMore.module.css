@@ -1,0 +1,39 @@
+.section {
+    padding: var(--section-padding-2) var(--side-margin) var(--section-padding-1) var(--side-margin);
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-sepia);
+}
+
+.title {
+    text-align: center;
+    font-family: var(--font-eb-garamond);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--font-white);
+}
+
+.vision {
+    width: 100%;
+    max-width: 820px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 30px 20px;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .section {
+        padding: var(--section-padding-3) var(--side-margin) var(--section-padding-1) var(--side-margin);
+    }
+
+    .vision {
+        grid-template-columns: 1fr;
+    }
+
+}

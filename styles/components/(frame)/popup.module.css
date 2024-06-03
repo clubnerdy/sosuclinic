@@ -1,0 +1,103 @@
+.card {
+    position: relative;
+    width: 338px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    gap: 0;
+    overflow: hidden;
+    background-color: var(--font-black);
+    color: var(--font-white);
+}
+
+.card__contents {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card__contents img {
+    aspect-ratio: 340 / 400;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__footer {
+    padding: 16px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    place-items: center;
+    background: #FFFFFF;
+}
+
+.button__noshow {
+    text-align: left;
+    width: 100%;
+    font-family: var(--font-pretendard);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--font-black);
+    cursor: pointer;
+    user-select: none;
+}
+
+.button__show {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button__show span {
+    font-family: var(--font-eb-garamond);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    color: var(--font-black);
+}
+
+.button__show img {
+    width: 5px;
+    height: 9px;
+}
+
+.button__cancel {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 15;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button__cancel::before,
+.button__cancel::after {
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--font-white);
+}
+
+.button__cancel::before {
+    transform: rotate(45deg)
+}
+
+.button__cancel::after {
+    transform: rotate(-45deg)
+}

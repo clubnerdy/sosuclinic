@@ -1,0 +1,36 @@
+{
+	"name": "sosu-clinic",
+	"version": "1.0.0",
+	"description": "sosu clinic",
+	"main": "index.js",
+	"scripts": {
+		"start:dev": "next dev",
+		"build": "next build",
+		"start": "next start -p 8888"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@notionhq/client": "^2.2.14",
+		"@types/gtag.js": "^0.0.19",
+		"@types/navermaps": "^3.7.5",
+		"@types/react-scroll": "^1.8.10",
+		"aos": "^2.3.4",
+		"html-react-parser": "^5.1.1",
+		"next": "^14.1.0",
+		"notion-to-md": "^3.1.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-scroll": "^1.9.0",
+		"remark": "^15.0.1",
+		"remark-html": "^16.0.1",
+		"swiper": "^11.0.7",
+		"winston": "^3.13.0"
+	},
+	"devDependencies": {
+		"@types/node": "20.11.20",
+		"@types/react": "18.2.58",
+		"typescript": "5.3.3"
+	}
+}

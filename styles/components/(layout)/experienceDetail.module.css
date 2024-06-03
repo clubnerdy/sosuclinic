@@ -1,0 +1,247 @@
+.section {
+    padding: var(--section-padding-2) var(--side-margin) var(--section-padding-1) var(--side-margin);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section>* {
+    gap: 50px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.title {
+    text-align: center;
+    font-family: var(--font-eb-garamond);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--font-black);
+}
+
+.subtitle {
+    text-align: center;
+    font-family: var(--font-pretendard);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--font-black);
+}
+
+.description {
+    text-align: center;
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 380;
+    line-height: 24px;
+    color: var(--font-black);
+}
+
+.contents {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.contents>*:nth-child(1) {
+    align-self: end;
+}
+
+.contents>*:nth-child(2) {
+    margin: 53px 0;
+}
+
+.contents>*:nth-child(3) {
+    align-self: start;
+}
+
+.frame {
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+
+.frame:hover .hover {
+    opacity: 1;
+}
+
+.frame img {
+    width: 100%;
+    max-width: unset;
+}
+
+.hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: var(--font-eb-garamond);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--font-white);
+    object-fit: cover;
+    transition: opacity var(--theme-duration-2);
+}
+
+.mobileLine {
+    width: 100%;
+    height: 1px;
+    display: none;
+    background: #000000;
+}
+
+.mobileArrow {
+    display: none;
+}
+
+.info {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .contents {
+        display: flex;
+        overflow-x: auto;
+        min-width: 0;
+    }
+
+    .contents * {
+        width: 57.14vw;
+        flex-shrink: 0;
+    }
+
+    .contents>*:nth-child(1) {
+        align-self: unset;
+    }
+
+    .contents>*:nth-child(2) {
+        margin: unset;
+    }
+
+    .contents>*:nth-child(3) {
+        align-self: unset;
+    }
+
+    .frame {
+        aspect-ratio: 400 / 644;
+    }
+
+    .frame img {
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .section {
+        padding: var(--section-padding-3) var(--side-margin);
+    }
+
+    .title {
+        font-family: var(--font-eb-garamond);
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
+    }
+
+    .subtitle {
+        font-size: 13.5px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    .description {
+        word-break: break-all;
+        text-align: center;
+        font-family: var(--font-pretendard);
+        font-size: 13.5px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+    }
+
+    .description br {
+        display: none;
+    }
+
+    .mobileArrow {
+        display: block;
+    }
+
+    .mobileArrow.active {
+        transform: rotate(180deg);
+    }
+
+    .mobileLine {
+        display: block;
+    }
+
+    .description {
+        font-size: 13.5px;
+    }
+
+    .detail .description {
+        display: none;
+    }
+
+    .detail .description.active {
+        display: block;
+        animation: fadeIn 300ms ease-out;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

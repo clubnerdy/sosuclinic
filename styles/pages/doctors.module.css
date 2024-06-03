@@ -1,0 +1,131 @@
+.main {
+    padding-top: var(--section-padding-3);
+    width: 100%;
+}
+
+.section {
+    padding: var(--section-padding-2) var(--side-margin);
+    width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
+    font-family: var(--font-pretendard);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--font-black);
+}
+
+.contents {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 48px;
+    overflow: hidden;
+}
+
+.visual {
+    width: 100%;
+}
+
+.visual img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.staff {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.title {
+    font-family: var(--font-pretendard);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--font-black);
+}
+
+.caption {
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: var(--font-black);
+}
+
+.description {
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: var(--font-black);
+}
+
+.list {
+    line-height: 24px;
+}
+
+.item {
+    padding-left: 16px;
+    position: relative;
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: var(--font-black);
+}
+
+.item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .section {
+        padding: var(--section-padding-3) var(--side-margin);
+    }
+
+    .contents {
+        grid-template-columns: 1fr;
+    }
+}
